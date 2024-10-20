@@ -1,0 +1,130 @@
+{
+  "id": 1,
+  "name": "Jira API",
+  "base_url": "https://clementerr.atlassian.net/rest/api/3",
+  "authentication": {
+    "type": "HTTPBasicAuth",
+    "email": "Do not use here. Loaded from .env file",
+    "token": "Do not use here. Loaded from .env file"
+  },
+  "endpoints": [
+    {
+      "name": "search_for_issues_using_JQL",
+      "path": "/search",
+      "method": "GET",
+      "headers": {
+          "Accept": "application/json"
+      },
+      "responses": {
+        "200": "Success",
+        "400": "Bad request",
+        "401": "Unauthorized"
+      }
+    },
+    {
+      "name": "get_account_IDs_for_users",
+      "path": "/user/bulk/migration",
+      "method": "GET",
+      "headers": {
+          "Accept": "application/json"
+      },
+      "responses": {
+        "200": "Success",
+        "400": "Bad request",
+        "401": "Unauthorized"
+      }
+    },
+    {
+      "name": "get_project",
+      "path": "/project/{projectIdOrKey}",
+      "method": "GET",
+      "headers": {
+          "Accept": "application/json"
+      },
+      "responses": {
+        "200": "Success",
+        "401": "Unauthorized",
+        "404": "Not Found"
+      }
+    },
+    {
+      "name": "get_projects_paginated",
+      "path": "/project/search",
+      "method": "GET",
+      "headers": {
+          "Accept": "application/json"
+      },
+      "responses": {
+        "200": "Success",
+        "400": "Bad Request",
+        "401": "Unauthorized",
+        "404": "Not Found"
+      }
+    },
+    {
+      "name": "get_issue",
+      "path": "/issue/{issueIdOrKey}",
+      "method": "GET",
+      "headers": {
+        "Accept": "application/json"
+      },
+      "responses": {
+        "200": "OK",
+        "401": "Unauthorized",
+        "404": "Not Found"
+      }
+    },
+    {
+      "name": "delete_issue",
+      "path": "/issue/{issueIdOrKey}",
+      "method": "DELETE",
+      "headers": {},
+      "responses": {
+        "204": "No Content",
+        "400": "Bad Request",
+        "401": "Unauthorized",
+        "403": "Forbidden",
+        "404": "Not Found"
+      }
+    },
+    {
+      "name": "open_issue",
+      "path": "/issue",
+      "method": "POST",
+      "headers": {
+          "Accept": "application/json",
+          "Content-Type": "application/json"
+      },
+      "responses": {
+        "201": "Created",
+        "400": "Bad Request"
+      }
+    },
+    {
+      "name": "get_metadata_issuetypes",
+      "path": "/issue/createmeta/{projectIdOrKey}/issuetypes",
+      "method": "GET",
+      "headers": {
+          "Accept": "application/json"
+      },
+      "responses": {
+        "200": "Success",
+        "400": "Bad Request",
+        "401": "Unauthorized"
+      }
+    },
+    {
+      "name": "get_metadata_issuetype",
+      "path": "/issue/createmeta/{projectIdOrKey}/issuetypes/{issueTypeId}",
+      "method": "GET",
+      "headers": {
+          "Accept": "application/json"
+      },
+      "responses": {
+        "200": "Success",
+        "400": "Bad Request",
+        "401": "Unauthorized"
+      }
+    }
+  ]
+}

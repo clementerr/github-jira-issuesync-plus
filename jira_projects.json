@@ -1,0 +1,16 @@
+{
+  "projects": [
+    {
+      "id": "10002",
+      "key": "CD",
+      "name": "Python project",
+      "description": "This Jira project issues are synchronized from Github",
+      "projectTypeKey": "Software",
+      "lead": {
+        "accountId": "clemente.reyes.ricardo@gmail.com",
+        "displayName": "Clemente Reyes",
+        "email": "clemente.reyes.ricardo@gmail.com"
+      }
+    }
+  ]
+}
